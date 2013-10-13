@@ -14,7 +14,7 @@ public class Main extends Application {
         // Load application main frame and panel
         FXMLLoader appMainFrameLoader = FXHelper.getLoader("AppMainFrame");
         AnchorPane appMainFrame = (AnchorPane) appMainFrameLoader.load();
-        AppMainFrameController controller = (AppMainFrameController) appMainFrameLoader.getController();
+        AppMainFrameController controller = appMainFrameLoader.getController();
         // Load login pane
         FXMLLoader loginPanelLoader = FXHelper.getLoader("LoginPane");
         AnchorPane loginPanel = (AnchorPane) loginPanelLoader.load();
@@ -26,7 +26,7 @@ public class Main extends Application {
         stage.setTitle("Odisee(R) Client");
         stage.show();
         //
-        LoginController loginController = (LoginController) loginPanelLoader.getController();
+        LoginController loginController = loginPanelLoader.getController();
         loginController.loginUsernameFocus();
     }
 
